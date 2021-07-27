@@ -1,5 +1,5 @@
 # 2 tier app deployment
-![](images/ec2.png)
+![](images/EC2.png)
 ## Deploy steps
 1. Copy code from host machine to AWS ec2 instance
 2. Install required dependencies for node app
