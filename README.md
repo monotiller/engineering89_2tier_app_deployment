@@ -83,19 +83,19 @@ Before moving on to n-tier architectures, during end of sprint, always talk to c
 - Changing the config files to make DB accessible. Move into the `/etc` directory
   - Delete `mongod.conf`
   - Create a file called `mongod.conf` with the properties:
-    ```console
-    storage:
-    dbPath: /var/lib/mongodb
-    journal:
+```console
+storage:
+  dbPath: /var/lib/mongodb
+  journal:
     enabled: true
-    systemLog:
-    destination: file
-    logAppend: true
-    path: /var/log/mongodb/mongod.log
-    net:
-    port: 27017
-    bindIp: 0.0.0.0
-    ```
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+```
 - Move back in to the folder with the DB files hosted and run: `sudo systemctl restart mongod`
 - Then: `sudo systemctl enable mongod`
 
